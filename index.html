@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>PipBoy</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/pipboy.app.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand navbar-light">
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav nav-fill">
+                <li class="navbar-item active"><a href="#" class="nav-link">Stat</a></li>
+                <li class="navbar-item"><a href="#" class="nav-link">Inv</a></li>
+                <li class="navbar-item"><a href="#" class="nav-link">Data</a></li>
+                <li class="navbar-item"><a href="#" class="nav-link">Map</a></li>
+                <li class="navbar-item"><a href="#" class="nav-link">Radio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item"><a href="#status" class="nav-link" data-toggle="tab" role="tab">Status</a></li>
+        <li class="nav-item"><a href="#special" class="nav-link" data-toggle="tab">Special</a></li>
+        <li class="nav-item"><a href="#perks" class="nav-link" data-toggle="tab">Perks</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="status" role="tabpanel">
+            <div class="center-image">
+                <img src="img/pipboy.gif" alt="PipBoy-gif image">
+            </div>
+        </div>
+        <div class="tab-pane" id="special" role="tabpanel">Lorem</div>
+        <div class="tab-pane" id="perks" role="tabpanel">Lorem ipsum sit.</div>
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="col-3">
+                HP 90/90
+            </div>
+            <div class="col-6">
+                LEVEL 1
+                <div class="level-progress"></div>
+            </div>
+            <div class="col-3">
+                AP 70/70
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/pipboy.app.js"></script>
+</body>
+</html>
