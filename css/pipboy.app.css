@@ -1,14 +1,34 @@
 
 @font-face {
-    font-family: PipBoy;
-    src: url('fonts/MONOFONT.TTF');
+    font-family: 'PipBoy';
+    src: url('../fonts/Monofonto.woff2') format('woff2'),
+    url('../fonts/Monofonto.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
+
 
 body {
     font-family: 'PipBoy', sans-serif;
     text-transform: uppercase;
+    font-weight: bold;
     background: #272b23;
     color: #14fe17;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 5000;
+    top: 0;
+    background-size: 4px;
+    pointer-events: none;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.4) 1px, transparent 1px, transparent 2px);
+    opacity: .2;
 }
 
 .navbar {
@@ -53,21 +73,210 @@ body {
 }
 
 ul.navbar-nav > li.navbar-item > a.nav-link, ul > li.nav-item > a, ul.navbar-nav > li.nav-item.active > a.nav-item {
+    font-size: 32px;
+    line-height: 22px;
+    padding-bottom: 0px;
+}
+
+ul.navbar-nav > li.navbar-item > a.nav-link, ul > li.nav-item > a, ul.navbar-nav > li.nav-item.active > a.nav-item {
     color: #14fe17 !important;
 }
 
+.navbar-nav {
+    margin: 0 300px;
+}
+
+.navbar-item a {
+    background: #272b23;
+    position: relative;
+    z-index: 50;
+    width: 70% !important;
+}
+
+.navbar-item.active::before {
+    content: "";
+    position: absolute;
+    background: #272b23;
+    width: 100%;
+    height: 20px;
+    top: 20px;
+    border-top: 2px solid #14fe17;
+    border-left: 2px solid #14fe17;
+    border-right: 2px solid #14fe17;
+}
+
+.nav.nav-tabs {
+    margin: 20px;
+    border: none;
+}
+
+.nav.nav-tabs > .nav-item > .nav-link {
+    border: none;
+}
+
+.nav.nav-tabs > li > a {
+    font-size: 22px;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+    padding: 5px 10px;
+}
+
+.nav.nav-tabs > li {
+    opacity: 0.5;
+}
+
+.nav.nav-tabs > li:last-child {
+    opacity: 0.2;
+}
+
+.nav.nav-tabs > li.active {
+    opacity: 1;
+}
+
 footer {
+    font-size: 26px;
     position: fixed;
     width: calc(100% - 40px);
     margin: 20px;
     bottom: 0;
 }
 
-.center-image img {
-    max-height: 300px;
+footer .row {
+    background: rgba(20, 254, 23, .3);
+    width: 99%;
+    margin: 0 auto;
+}
+
+footer .col-6 {
+    border-left: 6px solid #272b23;
+    border-right: 6px solid #272b23;
+}
+
+footer .left {
+    text-align: right;
+}
+
+
+.level-progress {
+    width: 70%;
+    height: 16px;
+    display: inline-block;
+    border: 2px solid #14fe17;
+}
+
+.level-progress-indicator {
+    width: 70%;
+    height: 100%;
+    background: #14fe17;
+}
+
+.w1 {
+    width: 10%;
+}
+
+.w2 {
+    width: 20%;
+}
+
+.w4 {
+    width: 40%;
+}
+
+.w6 {
+    width: 60%;
+}
+
+.w8 {
+    width: 80%;
+}
+
+.w10 {
+    width: 100%;
+}
+
+.stat-bar {
+    width: 80px;
     margin: auto;
-    display: block;
-    position: relative;
-    margin-top: 100px;
+}
+
+.pipboy {
+    width: 400px;
+    background: url("../img/pipboy.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
     filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(7) brightness(1) contrast(2);
+}
+
+.pipboy-info {
+    width: 400px;
+    margin: -80px auto 0;
+}
+
+.pipboy .row {
+    margin-bottom: 120px;
+}
+
+.pipboy-info .row .col-1, .pipboy-info .row .col-2 {
+    background: rgba(20, 254, 23, .3);
+    margin-right: 4px;
+}
+
+.pipboy-info .row .col-1.transparent, .pipboy-info .row .col-2.transparent {
+    background: transparent;
+}
+
+.pipboy-info .row img {
+    width: 100%;
+    margin: 15px auto 10px;
+    filter: grayscale(1) brightness(200) contrast(0) sepia(100%) hue-rotate(55deg) saturate(20);
+}
+
+.pipboy-info .row .icon img {
+    width: 15px;
+    margin-left: -5px;
+}
+
+.pipboy-info .row .points {
+    width: 15px;
+    margin-left: -5px;
+}
+
+.menu li {
+    list-style: none;
+    padding: 15px;
+    margin: 20px 0;
+    width: 30%;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all.2s ease;
+}
+
+.menu li:hover {
+    background: rgba(20, 254, 23, 0.5);
+}
+
+#inv-menu {
+    margin: 50px;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.item-stats {
+    font-weight: bold;
+    position: absolute;
+    right: 40px;
+    bottom: 100px;
+    width: 250px;
+}
+
+.item-stats .col-12 {
+    background: rgba(20, 254, 23, .3);
+    margin-bottom: 2px;
 }
