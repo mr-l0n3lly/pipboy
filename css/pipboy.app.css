@@ -1,8 +1,8 @@
 
 @font-face {
     font-family: 'PipBoy';
-    src: url('../fonts/Monofonto.woff2') format('woff2'),
-    url('../fonts/Monofonto.woff') format('woff');
+    src: url('./fonts/MONOFONT.woff2') format('woff2'),
+    url('./fonts/MONOFONT.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -55,7 +55,6 @@ body::after {
     right: 0px;
 }
 
-
 .navbar-light ul.navbar-nav {
     width: 100%;
 }
@@ -70,6 +69,15 @@ body::after {
     text-align: center;
     width: 50%;
     margin: auto;
+}
+
+a {
+    color: #14fe17;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #14fe17;
 }
 
 ul.navbar-nav > li.navbar-item > a.nav-link, ul > li.nav-item > a, ul.navbar-nav > li.nav-item.active > a.nav-item {
@@ -242,6 +250,11 @@ footer .left {
     margin-left: -5px;
 }
 
+
+.menu li a {
+    padding-left: 25px;
+}
+
 .menu li {
     list-style: none;
     padding: 15px;
@@ -254,6 +267,16 @@ footer .left {
 
 .menu li:hover {
     background: rgba(20, 254, 23, 0.5);
+}
+
+.menu li a.active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #14fe17;
+    margin-top: 7px;
 }
 
 #inv-menu {
